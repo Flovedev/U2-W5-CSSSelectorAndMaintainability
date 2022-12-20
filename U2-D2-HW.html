@@ -429,18 +429,71 @@
     <script>
         /* JS Exercises should go here */
         // Write a JavaScript functionality to add a new link into the navbar
+        function newLink(extraLink) {
+            navBar = document.getElementsByClassName('nav')
+            newSpan = document.createElement('span')
+            newSpan.textContent = extraLink
+            for (let i = 0; i < navBar.length; i++) {
+                navBar[i].appendChild(newSpan);
+            }
+        }
 
-        
+        newLink("Extra")
+
         // Write a JavaScript functionality to change the color of the main heading title
+        function headingColor(color) {
+            colorNode = document.getElementsByTagName('h1')
+            for (let i = 0; i < colorNode.length; i++) {
+                colorNode[i].style.color = color;
+            }
+        }
+        headingColor("red")
+
         // Write a JavaScript functionality to change the background of the jumbotron
+        function newBackGround(color) {
+            junbotronNode = document.getElementsByClassName('jumbotron')
+            for (let i = 0; i < junbotronNode.length; i++) {
+                junbotronNode[i].style.background = color;
+            }
+        }
+        newBackGround("lightblue")
 
         // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
 
-        // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
-        // Write a JavaScript functionality to add a new Blog Post (div with title and text)
-        // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
+        function removeTwitter() {
+            liNode = document.getElementsByTagName('li')
+            for (let i = 0; i < liNode.length; i++) {
+                if (liNode[i].innerText === "Twitter") {
+                    liNode[i].style.display = "none";
+                    console.log(liNode)
+                }
+            }
+        }
+        window.onload = removeTwitter()
 
+        // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
+
+        function remove50() {
+            blogNode = document.querySelector('.blog-post')
+            firstnode = blogNode[1].getElementsByTagName('p')
+            console.log(blogNode)
+            for (let i = 0; i < blogNode.length; i++) {
+
+            }
+
+        }
+        // Write a JavaScript functionality to add a new Blog Post (div with title and text)
+        function addBlog() {
+
+        }
+        // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
+        function removeOld() {
+
+        }
         // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
+        function authorAlert() {
+
+        }
         // EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
     </script>
 </body>
