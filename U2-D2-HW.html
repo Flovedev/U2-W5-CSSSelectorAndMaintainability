@@ -51,7 +51,7 @@
         }
 
         /* Excersise 4; */
-        .blog-post:nth-of-type(1) h2:first-of-type {
+        .blog-post:nth-of-type(1) {
             border: 2px solid;
         }
 
@@ -474,7 +474,7 @@
         // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
 
         function remove50() {
-            blogNode = document.querySelector('.blog-post')
+            blogNode = document.querySelector('.blog-post p')
             firstnode = blogNode[1].getElementsByTagName('p')
             console.log(blogNode)
             for (let i = 0; i < blogNode.length; i++) {
